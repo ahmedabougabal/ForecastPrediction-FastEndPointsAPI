@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "BHw2cJbEVbE=",
+  "dgSpecHash": "Yvg1VoYaOuk=",
   "success": true,
   "projectFilePath": "/home/abougabal/fastEndPoints/fastEndPointsAPIs/fastEndPointsAPIs/fastEndPointsAPIs.csproj",
   "expectedPackageFiles": [
     "/home/abougabal/.nuget/packages/fastendpoints/5.35.0/fastendpoints.5.35.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/fastendpoints.attributes/5.35.0/fastendpoints.attributes.5.35.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/fastendpoints.messaging.core/5.35.0/fastendpoints.messaging.core.5.35.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/fastendpoints.swagger/5.35.0/fastendpoints.swagger.5.35.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/microsoft.extensions.apidescription.server/6.0.3/microsoft.extensions.apidescription.server.6.0.3.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.configuration.binder/8.0.2/microsoft.extensions.configuration.binder.8.0.2.nupkg.sha512",
@@ -21,6 +23,7 @@
     "/home/abougabal/.nuget/packages/microsoft.extensions.diagnostics/8.0.1/microsoft.extensions.diagnostics.8.0.1.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.diagnostics.abstractions/8.0.1/microsoft.extensions.diagnostics.abstractions.8.0.1.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.fileproviders.abstractions/8.0.0/microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/microsoft.extensions.fileproviders.embedded/8.0.0/microsoft.extensions.fileproviders.embedded.8.0.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.fileproviders.physical/8.0.0/microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.filesystemglobbing/8.0.0/microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.hosting/8.0.1/microsoft.extensions.hosting.8.0.1.nupkg.sha512",
@@ -35,7 +38,20 @@
     "/home/abougabal/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.options.configurationextensions/8.0.0/microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
     "/home/abougabal/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "/home/abougabal/.nuget/packages/system.diagnostics.eventlog/8.0.1/system.diagnostics.eventlog.8.0.1.nupkg.sha512"
+    "/home/abougabal/.nuget/packages/namotion.reflection/3.2.0/namotion.reflection.3.2.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/njsonschema/11.1.0/njsonschema.11.1.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/njsonschema.annotations/11.1.0/njsonschema.annotations.11.1.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/njsonschema.newtonsoftjson/11.1.0/njsonschema.newtonsoftjson.11.1.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/njsonschema.yaml/11.1.0/njsonschema.yaml.11.1.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/nswag.annotations/14.2.0/nswag.annotations.14.2.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/nswag.aspnetcore/14.2.0/nswag.aspnetcore.14.2.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/nswag.core/14.2.0/nswag.core.14.2.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/nswag.core.yaml/14.2.0/nswag.core.yaml.14.2.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/nswag.generation/14.2.0/nswag.generation.14.2.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/nswag.generation.aspnetcore/14.2.0/nswag.generation.aspnetcore.14.2.0.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/system.diagnostics.eventlog/8.0.1/system.diagnostics.eventlog.8.0.1.nupkg.sha512",
+    "/home/abougabal/.nuget/packages/yamldotnet/16.2.0/yamldotnet.16.2.0.nupkg.sha512"
   ],
   "logs": []
 }

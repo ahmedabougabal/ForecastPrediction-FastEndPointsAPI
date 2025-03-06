@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fastEndPointsAPIs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74b5d0618e5cce83415ba7004f43494ebe7b995b")]
 [assembly: System.Reflection.AssemblyProductAttribute("fastEndPointsAPIs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fastEndPointsAPIs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
