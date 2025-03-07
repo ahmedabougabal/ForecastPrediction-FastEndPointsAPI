@@ -4,6 +4,6 @@ namespace  fastEndPointsAPIs.Contracts.Responses;
 
 public class WeatherForecastsResponse
 {
-    public IEnumerable<WeatherForecastResponse> Forecasts { get; set; }>
+    public IEnumerable<WeatherForecastResponse> Forecasts { get; set; }
 }
 

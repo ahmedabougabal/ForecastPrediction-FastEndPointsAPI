@@ -2,17 +2,25 @@ using FastEndpoints;
 using fastEndPointsAPIs.Contracts.Requests;
 using fastEndPointsAPIs.Contracts.Responses;
 using fastEndPointsAPIs.Models;
+using fastEndPointsAPIs.Services;
 using Microsoft.Extensions.Primitives;
-
+using Microsoft.Extensions.Logging;
 namespace fastEndPointsAPIs.Endpoints;
 
 // this method is like saying i am creating an endpoint that takes a request and return a response 
 public class WeatherForecastEndpoint : Endpoint<WeatherForecastRequest, WeatherForecastsResponse>
 {
-    private static readonly string[] Summaries =
+    public ILogger<WeatherForecastEndpoint> _logger { get; init; }
+    public IWeatherService _weatherService { get; set; }
+
+    public WeatherForecastEndpoint(ILogger<WeatherForecastEndpoint> logger, IWeatherService weatherService)
     {
-        "freezing", "bracing", "chilly", "cool", "mild", "windy","warm"
-    };
+        _weatherService = weatherService;
+        _logger = logger;
+    }
+    
+    
+  
     public override void Configure() // sets up how the endpoint works 
     {
         Verbs(Http.GET);
@@ -23,14 +31,10 @@ public class WeatherForecastEndpoint : Endpoint<WeatherForecastRequest, WeatherF
     // method that runs when sb calls my endpoint
     public override async Task HandleAsync(WeatherForecastRequest req, CancellationToken ct)
     {
-        var forecasts = Enumerable.Range(1, req.Days)
-            .Select(Index => new WeatherForecast()
-            {
-                Date = DateTime.Now.AddDays(Index),
-                TemperatureC = Random.Shared.Next(-20, 55), // random temperatures
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-
-            }).ToArray();
+        _logger.LogDebug("fetching weather forecast for " +
+                               "days{Days}.", req.Days);
+        var forecasts = await _weatherService.GetForecastsAsync(req.Days);
+        
         var response = new WeatherForecastsResponse
         {
             Forecasts = forecasts.Select(x => new WeatherForecastResponse
