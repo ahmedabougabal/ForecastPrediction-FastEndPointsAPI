@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace fastEndPointsAPIs.Endpoints;
 
 // this method is like saying i am creating an endpoint that takes a request and return a response 
-public class WeatherForecastEndpoint : Endpoint<WeatherForecastRequest, WeatherForecastsResponse>
+public class WeatherForecastEndpoint : Endpoint<WeatherForecastRequest, WeatherForecastsResponse, WeatherForecastMapper>
 {
     public ILogger<WeatherForecastEndpoint> _logger { get; init; }
     public IWeatherService _weatherService { get; set; }
@@ -34,17 +34,14 @@ public class WeatherForecastEndpoint : Endpoint<WeatherForecastRequest, WeatherF
         _logger.LogDebug("fetching weather forecast for " +
                                "days{Days}.", req.Days);
         var forecasts = await _weatherService.GetForecastsAsync(req.Days);
+        // turns forecasts to list of responses instead of handing over an unlisted single forecasts
+        var forecastResponses = forecasts.Select(Map.FromEntity).ToList();
         
         var response = new WeatherForecastsResponse
         {
-            Forecasts = forecasts.Select(x => new WeatherForecastResponse
-            {
-                Date = x.Date,
-                Summary = x.Summary,
-                TemperatureC = x.TemperatureC,
-            }).ToList()  
+            Forecasts = forecastResponses // puts the list into the IEnumerable defined in the file WeatherForcastsResponse
         };
-        await SendAsync(response, cancellation:ct);
+        await SendAsync(response, cancellation:ct); // sends the collection
     }
 }
 /*
