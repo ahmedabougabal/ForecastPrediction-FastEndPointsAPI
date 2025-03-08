@@ -1,4 +1,4 @@
-# fastEndPointsApIs
+# fastEndPointsAPIs
 
 
 ## request endpoint response pattern
@@ -33,6 +33,9 @@ nutshell : don't expose those domain entities instead, use mappers to control wh
 please refer to this documentation link : 
 https://fast-endpoints.com/docs/domain-entity-mapping#mapping-logic-in-a-separate-class
 
+--- 
+## adds endpoints documentation as per fastendpoints docs manual 
+![image](https://github.com/user-attachments/assets/ed02cdc9-e9c0-44d4-8d48-104d016df52f)
 
 
 
