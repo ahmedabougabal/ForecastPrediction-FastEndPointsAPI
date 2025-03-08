@@ -5,6 +5,8 @@ using fastEndPointsAPIs.Models;
 using fastEndPointsAPIs.Services;
 using Microsoft.Extensions.Primitives;
 using Microsoft.Extensions.Logging;
+
+
 namespace fastEndPointsAPIs.Endpoints;
 
 // this method is like saying i am creating an endpoint that takes a request and return a response 
@@ -25,8 +27,17 @@ public class WeatherForecastEndpoint : Endpoint<WeatherForecastRequest, WeatherF
     {
         Verbs(Http.GET);
         Routes("weather/{days}");
-        AllowAnonymous(); // to allow this endpoint to function as auth is applied 
+        AllowAnonymous(); // to allow this endpoint to function as auth is applied
+        Summary(s =>
+        {
+            s.Summary= "Weather forecast prediction";
+            s.Description = "this is an endpoint for predicting weather forecasts for upcoming {input days} days.";
+            s.Params["days"] = "this is the number of days";
+            s.Response(200, "a list of weather forecasts");
+            s.Response(400, "If the 'days' parameter is invalid (e.g., non-numeric or negative)");
+        });
     }
+    
 
     // method that runs when sb calls my endpoint
     public override async Task HandleAsync(WeatherForecastRequest req, CancellationToken ct)
